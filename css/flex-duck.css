@@ -4,8 +4,9 @@
  * ===========================================
  */
 
-/* Row: set width to 100% of its parent */
+/* Define behavior for rows  */
     .row {
+        /* Set width to 100% of its parent */
         width: 100%;
         /* Will make borders & padding go inside the elements instead of expanding */
         -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -25,13 +26,15 @@
 /* Add general rules for all columns */
     .row [class *= "small-"], .row [class *= "medium-"], .row [class *= "large-"] {
         /* Make the columns collapse correctly */
+        display: block;
         float: left;
+        /* Will make borders & padding go inside the elements instead of expanding */
         -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
         -moz-box-sizing: border-box;    /* Firefox, other Gecko */
         box-sizing: border-box;         /* Opera/IE 8+ */
     }
 
-/* Hide divs */
-.small-hidden, .medium-hidden, .large-hidden {
-    display: none;
-}
+/* Hidding classes */
+    .small-hidden, .medium-hidden, .large-hidden {
+        display: none !important;
+    }

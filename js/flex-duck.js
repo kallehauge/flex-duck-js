@@ -4,12 +4,12 @@
  * ===========================================
  */
 
-function initFlexDuck(gridColumns, medium, large, rowMaxWidth) {
+function initFlexDuck(gridColumns, mediumScreen, largeScreen, rowMaxWidth) {
 	// Make sure the parameters are integers and pass the variable as null if it isn't set.
-	gridColumns = parseInt(gridColumns) || null;
-	medium 		= parseInt(medium) 		|| null;
-	large 		= parseInt(large) 		|| null;
-	rowMaxWidth = parseInt(rowMaxWidth) || null;
+	gridColumns 	= parseInt(gridColumns) || null;
+	mediumScreen 	= parseInt(mediumScreen)|| null;
+	largeScreen 	= parseInt(largeScreen) || null;
+	rowMaxWidth 	= parseInt(rowMaxWidth) || null;
 
 	// Row: set max width, if a 4. parameter is given.
 	if (rowMaxWidth != null) {
@@ -30,7 +30,7 @@ function initFlexDuck(gridColumns, medium, large, rowMaxWidth) {
 	queryWidth(gridColumns, "large");
 
 	// Large: what should happen if the browser is greater than "large" ?
-	function largeScreen() {
+	function largeScreenStyle() {
 		// add classes
 		$(".large-hide").addClass("large-hidden");
 		// remove classes
@@ -39,7 +39,7 @@ function initFlexDuck(gridColumns, medium, large, rowMaxWidth) {
 	}
 
 	// Medium: what should happen if the browser is greater than "medium" ?
-	function mediumScreen() {
+	function mediumScreenStyle() {
 		// add classes
 		$(".medium-hide").addClass('medium-hidden');
 		// remove classes
@@ -48,7 +48,7 @@ function initFlexDuck(gridColumns, medium, large, rowMaxWidth) {
 	}
 
 	// Small: what should happen if the browser is greater than "medium" ?
-	function smallScreen() {
+	function smallScreenStyle() {
 		// add classes
 		$(".small-hide").addClass("small-hidden");
 		// remove classes
@@ -62,24 +62,24 @@ function initFlexDuck(gridColumns, medium, large, rowMaxWidth) {
 		windowWidth = $(window).width();
 
 		// Media query hierarchy
-		if (windowWidth >= large) {
+		if (windowWidth >= largeScreen) {
 			/**
 			 *	Large: if the browser-window is greater than "large", then
 			 *	it will execute a function defined above with styling.
 			 */
-			largeScreen();
-		} else if (windowWidth >= medium) {
+			largeScreenStyle();
+		} else if (windowWidth >= mediumScreen) {
 			/**
 			 *	Medium: if the browser-window is greater than "medium", then
 			 *	it will execute a function defined above with styling.
 			 */
-			mediumScreen();
+			mediumScreenStyle();
 		} else {
 			/**
 			 *	Small: if the browser-window is less than "small", then
 			 *	it will execute a function defined above with styling.
 			 */
-			smallScreen();
+			smallScreenStyle();
 		}
 	}
 

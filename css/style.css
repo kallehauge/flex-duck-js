@@ -1,0 +1,20 @@
+/* line 2, ../sass/style.scss */
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 7, ../sass/style.scss */
+.wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* line 13, ../sass/style.scss */
+.wrap {
+  border: 1px solid black;
+}
+
+/* line 16, ../sass/style.scss */
+.row {
+  background-color: #a9d3f3;
+}

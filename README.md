@@ -24,10 +24,9 @@ There are 3 breakpoints available which are called "small", "medium" and "large"
 
 **Columns:** Based on the example above (12-grid):
 
-- Small-12 => will fill the screen 100%.
-- Medium-6 => will fill the screen 50%.
-- Large-4 => will fill the screen 33%.
-
+- .small-12 => will fill the screen 100%.
+- .medium-6 => will fill the screen 50%.
+- .large-4 => will fill the screen 33%.
 
 
 Installation
@@ -37,13 +36,13 @@ Installation
 	<link href="flex-duck.css" rel="stylesheet">
 	<script src="flex-duck.js"></script>
 
-**Flex-Duck init**
+**Initialization**
 
 	<script>
 		$(document).ready(function() {
-			initFlexDuck(grid, medium, large, max-width);
 			// Example:
 			// initFlexDuck(12, 550, 900);
+			initFlexDuck(grid, medium, large, max-width);
 		});
 	</script>
 

@@ -18,10 +18,18 @@ function initFlexDuck(gridColumns, mediumScreen, largeScreen, rowMaxWidth) {
 
 	// Function: to set the width of the different classes (based on the amount of columns and class name)
 	function queryWidth(columns, name) {
+		// Define array
+		var widthArray = ["small", "medium", "large"];
+		// Loop to "create" each grid-element
 		for ( var i = 1; i <= columns; i++ ) {
+			// Calculate procentage
 			percentage = (100 / columns * i);
+			// Set it as width
 			$("." + name + "-" + i).css("width", percentage + "%");
+			// Add values to array
+			widthArray.push(name + "-" + i, percentage + "%");
 		}
+		console.log(widthArray);
 	}
 
 	// Run the function for each of the classes.
@@ -47,7 +55,7 @@ function initFlexDuck(gridColumns, mediumScreen, largeScreen, rowMaxWidth) {
 		$(".small-hide").removeClass('small-hidden');
 	}
 
-	// Small: what should happen if the browser is greater than "medium" ?
+	// Small: what should happen if the browser is less than "medium" ?
 	function smallScreenStyle() {
 		// add classes
 		$(".small-hide").addClass("small-hidden");
@@ -68,6 +76,7 @@ function initFlexDuck(gridColumns, mediumScreen, largeScreen, rowMaxWidth) {
 			 *	it will execute a function defined above with styling.
 			 */
 			largeScreenStyle();
+			$("[class *= 'large-']").css('width')
 		} else if (windowWidth >= mediumScreen) {
 			/**
 			 *	Medium: if the browser-window is greater than "medium", then

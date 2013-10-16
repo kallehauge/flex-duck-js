@@ -26,8 +26,9 @@
 /* Add general rules for all columns */
     .row [class *= "small-"], .row [class *= "medium-"], .row [class *= "large-"] {
         /* Make the columns collapse correctly */
-        display: block;
         float: left;
+        /* Will make sure empty div's can push content */
+        display: block;
         /* Will make borders & padding go inside the elements instead of expanding */
         -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
         -moz-box-sizing: border-box;    /* Firefox, other Gecko */

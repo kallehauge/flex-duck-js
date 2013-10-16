@@ -16,29 +16,57 @@ function initFlexDuck(gridColumns, mediumScreen, largeScreen, rowMaxWidth) {
 		$(".row").css("max-width", rowMaxWidth);
 	}
 
-	// Function: to set the width of the different classes (based on the amount of columns and class name)
+	/**
+	* Function: queryWidth();
+	* 	This function will return arrays with all classes as keys (ex: "small-1", "small-2", "small-3"),
+	*	and a percentage value, calculated from the amount of grid columns.
+	* Values:
+	*	array[class-12] = "100%";
+	*/
 	function queryWidth(columns, name) {
-		// Define array
-		var widthArray = ["small", "medium", "large"];
-		// Loop to "create" each grid-element
+		// Define data-string. Values added inside the "for loop".
+		dataString = "";
+		// "Create" the dataString with each grid-element.
 		for ( var i = 1; i <= columns; i++ ) {
-			// Calculate procentage
+			// Calculate procentage.
 			percentage = (100 / columns * i);
-			// Set it as width
-			$("." + name + "-" + i).css("width", percentage + "%");
-			// Add values to array
-			widthArray.push(name + "-" + i, percentage + "%");
+			/**
+			* Generate a string that contains class-names and width values.
+			* Values and setup:
+			*	# "name-i," seperates from the next value with a comma
+			*	# "percentage%__" seperates from the next value with double underscore
+			*/
+			dataString += name + "-" + i + ", " + percentage + "__";
 		}
-		console.log(widthArray);
+		// Split the datastring up into an array
+		classArray = []; // define
+		// use class-name as array-name and split the string up into the amount of grid-columns.
+		dataString = dataString.split("__");
+		// Seperate the class-names and width values
+		for ( var x = 0; x < columns; x++ ) {
+			y = x+1;
+			tmp_array = dataString[x].split(",");
+			classArray[name+"-"+y] = tmp_array[1].trim();
+		};
+		return classArray;
 	}
 
-	// Run the function for each of the classes.
-	queryWidth(gridColumns, "small");
-	queryWidth(gridColumns, "medium");
-	queryWidth(gridColumns, "large");
+	// Get all classes and widths returned as arrays.
+	smallArray 	= queryWidth(gridColumns, "small");
+	mediumArray = queryWidth(gridColumns, "medium");
+	largeArray 	= queryWidth(gridColumns, "large");
+
+	// Debugging
+	// console.log(smallArray);
+	// console.log(mediumArray);
+	// console.log(largeArray);
 
 	// Large: what should happen if the browser is greater than "large" ?
 	function largeScreenStyle() {
+		// Loop the classes.
+		for ( var i = 1; i <= gridColumns; i++ ) {
+			$(".large-"+i).css("width", largeArray["large-"+i]+"%");
+		};
 		// add classes
 		$(".large-hide").addClass("large-hidden");
 		// remove classes
@@ -48,6 +76,10 @@ function initFlexDuck(gridColumns, mediumScreen, largeScreen, rowMaxWidth) {
 
 	// Medium: what should happen if the browser is greater than "medium" ?
 	function mediumScreenStyle() {
+		// Loop the classes.
+		for ( var i = 1; i <= gridColumns; i++ ) {
+			$(".medium-"+i).css("width", mediumArray["medium-"+i]+"%");
+		};
 		// add classes
 		$(".medium-hide").addClass('medium-hidden');
 		// remove classes
@@ -57,6 +89,10 @@ function initFlexDuck(gridColumns, mediumScreen, largeScreen, rowMaxWidth) {
 
 	// Small: what should happen if the browser is less than "medium" ?
 	function smallScreenStyle() {
+		// Loop the classes.
+		for ( var i = 1; i <= gridColumns; i++ ) {
+			$(".small-"+i).css("width", smallArray["small-"+i]+"%");
+		};
 		// add classes
 		$(".small-hide").addClass("small-hidden");
 		// remove classes
@@ -76,14 +112,13 @@ function initFlexDuck(gridColumns, mediumScreen, largeScreen, rowMaxWidth) {
 			 *	it will execute a function defined above with styling.
 			 */
 			largeScreenStyle();
-			$("[class *= 'large-']").css('width')
 		} else if (windowWidth >= mediumScreen) {
 			/**
 			 *	Medium: if the browser-window is greater than "medium", then
 			 *	it will execute a function defined above with styling.
 			 */
 			mediumScreenStyle();
-		} else {
+		} else if (windowWidth < mediumScreen) {
 			/**
 			 *	Small: if the browser-window is less than "small", then
 			 *	it will execute a function defined above with styling.

@@ -32,22 +32,25 @@ There are 3 breakpoints available which are called "small", "medium" and "large"
 
 Installation
 ---
+**Includes**
+
 	<link rel="stylesheet" href="css/flex-duck.css">
 	<script src="js/flex-duck.js"></script>
 
 	<script>
 		$(document).ready(function() {
-			/**
-			 * initFlexDuck(grid, medium, large, max-width);
-			 *   Grid:      Amount of grid-columns
-			 *   Medium:    The min-width for the medium query
-			 *   Large:     The min-width for the large query
-			 *   Max-width: If you which to give the row a max-width (null by default)
-			 *   Small:     (Will be used from width: 0 and up to the width of medium)
-			 */
-			initFlexDuck(12, 500, 860);
+			initFlexDuck(grid, medium, large, max-width);
 		});
 	</script>
+
+
+	initFlexDuck(12, 550, 900);
+
+**Grid:** Amount of grid-columns
+**Medium:** The min-width for the medium query
+**Large:** The min-width for the large query
+**Max-width:** If you which to give the row a max-width (null by default)
+***Small:** (Will be used from width: 0 and up to the width of medium)*
 
 Other functions
 ---

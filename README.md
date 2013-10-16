@@ -38,15 +38,14 @@ Installation
 	<script src="flex-duck.js"></script>
 
 **Flex-Duck init**
+
 	<script>
 		$(document).ready(function() {
 			initFlexDuck(grid, medium, large, max-width);
+			// Example:
+			// initFlexDuck(12, 550, 900);
 		});
 	</script>
-
-**Example**
-
-	initFlexDuck(12, 550, 900);
 
 **Grid:** Amount of grid-columns
 

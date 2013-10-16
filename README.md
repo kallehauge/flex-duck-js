@@ -34,8 +34,8 @@ Installation
 ---
 **Includes**
 
-	<link rel="stylesheet" href="css/flex-duck.css">
-	<script src="js/flex-duck.js"></script>
+	<link href="flex-duck.css" rel="stylesheet">
+	<script src="flex-duck.js"></script>
 
 **Flex-Duck init**
 	<script>
@@ -45,6 +45,7 @@ Installation
 	</script>
 
 **Example**
+
 	initFlexDuck(12, 550, 900);
 
 **Grid:** Amount of grid-columns

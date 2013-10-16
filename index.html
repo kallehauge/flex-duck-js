@@ -15,49 +15,74 @@
 	<script src="js/flex-duck.js"></script>
 	<script>
 		$(document).ready(function() {
-			initFlexDuck(12, 700, 900);
+			initFlexDuck(12, 500, 860);
 		});
 	</script>
 
 	<style>
+		* {
+			margin:0;
+			padding:0;
+		}
+
+		body {
+			-webkit-font-smoothing: antialiased;
+			background: #BF8A49;
+			color: white;
+			font-size: 1em;
+			font-weight: bold;
+			font-family: sans-serif;
+		}
+
 		.wrap {
-			border: 1px solid black;
 			max-width: 1000px;
 			margin: 0 auto;
+			background: #F2CA80;
 		}
-		.row {
-			border: 1px dashed red;
-			padding: 15px;
-		}
-		.row [class*="small-"], .row [class*="medium-"], .row [class*="large-"] {
-			border: 1px dotted #666;
+
+		.testClass {
+			margin: 10px;
+			padding: 10px;
+			border: 5px solid #E8B96D;
+			background: #444;
 		}
 	</style>
 </head>
 <body>
 	<div class="wrap">
 		<div class="row">
-			<!-- <div class="large-1"></div> -->
-			<div class="small-12 medium-6 large-4">Box 1</div>
-			<div class="small-12 medium-6 large-4">Box 2</div>
-			<div class="small-12 medium-6 large-4">Box 3</div>
+			<div class="small-12 medium-6 large-4">
+				<div class="testClass">Box 1</div>
+			</div>
+			<div class="small-12 medium-6 large-4">
+				<div class="testClass">Box 2</div>
+			</div>
+			<div class="small-12 medium-6 large-4">
+				<div class="testClass">Box 3</div>
+			</div>
 		</div>
 
 		<div class="row">
-			<div class="small-12 medium-6 large-3">Box 1</div>
-			<div class="small-12 medium-6 large-4">Box 2</div>
-			<div class="small-12 medium-6 large-5">Box 3</div>
+			<div class="small-12 medium-6 large-3">
+				<div class="testClass">Box 1</div>
+			</div>
+			<div class="small-12 medium-6 large-4">
+				<div class="testClass">Box 2</div>
+			</div>
+			<div class="small-12 medium-6 large-5">
+				<div class="testClass">Box 3</div>
+			</div>
 		</div>
 
 		<div class="row">
 			<div class="small-12 medium-hide large-hide">
-				Small iz workin' !
+				<div class="testClass">Small iz workin' ! </div>
 			</div>
-			<div class="small-12 small-hide large-hide">
-				Medium iz workin' !
+			<div class="medium-12 small-hide large-hide">
+				<div class="testClass">Medium iz workin' ! </div>
 			</div>
-			<div class="small-12 small-hide medium-hide">
-				Large iz workin' !
+			<div class="large-12 small-hide medium-hide">
+				<div class="testClass">Large iz workin' ! </div>
 			</div>
 		</div>
 	</div>

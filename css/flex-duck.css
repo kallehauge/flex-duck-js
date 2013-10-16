@@ -4,23 +4,34 @@
  * ===========================================
  */
 
-/*.row {
-  width: 100%;
-}
-.row:after {
-  content: " ";
-  display: block;
-  clear: both;
-  height: 0;
-  visibility: none;
-}
+/* Row: set width to 100% of its parent */
+    .row {
+        width: 100%;
+        /* Will make borders & padding go inside the elements instead of expanding */
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */
+    }
 
-.columns-behavior {}
-  float: left;
-  Safari/Chrome, other WebKit
-  -webkit-box-sizing: border-box;
-  Firefox, other Gecko
-  -moz-box-sizing: border-box;
-  Opera/IE 8+
-  box-sizing: border-box;
-}*/
+/* Clear floats after each row */
+    .row:after {
+        content: " ";
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: none;
+    }
+
+/* Add general rules for all columns */
+    .row [class *= "small-"], .row [class *= "medium-"], .row [class *= "large-"] {
+        /* Make the columns collapse correctly */
+        float: left;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */
+    }
+
+/* Hide divs */
+.small-hidden, .medium-hidden, .large-hidden {
+    display: none;
+}

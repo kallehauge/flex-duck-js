@@ -34,6 +34,13 @@
         display: block;
     }
 
+/* Push elements */
+    .push {
+        content: " ";
+        height: 1px;
+        visibility: hidden;
+    }
+
 /* Hidding classes */
     .small-hidden, .medium-hidden, .large-hidden {
         display: none !important;

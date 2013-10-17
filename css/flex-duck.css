@@ -5,11 +5,11 @@
  */
 
 /* Will make borders & padding go inside the elements instead of expanding */
-*, *:before, *:after {
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    box-sizing: border-box;         /* Opera/IE 8+ */
-}
+    *, *:before, *:after {
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        box-sizing: border-box;         /* Opera/IE 8+ */
+    }
 
 /* Define behavior for rows  */
     .row {

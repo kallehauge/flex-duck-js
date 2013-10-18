@@ -1,7 +1,8 @@
 /**
  * ===========================================
- *	FLEX DUCK
+ *  FLEX DUCK
  * ===========================================
+ *  This file contains general rules that will make the flex-duck-js script work.
  */
 
 /* Will make borders & padding go inside the elements instead of expanding */
@@ -30,12 +31,12 @@
     .row [class *= "small-"], .row [class *= "medium-"], .row [class *= "large-"] {
         /* Make the columns collapse correctly */
         float: left;
-        /* Will make sure empty div's can push content */
         display: block;
     }
 
 /* Push elements */
     .push {
+        /* Will make sure empty div's can push content and are hidden */
         content: " ";
         height: 1px;
         visibility: hidden;

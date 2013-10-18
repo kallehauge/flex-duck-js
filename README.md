@@ -26,6 +26,7 @@ There are up to 3 breakpoints available which are called *small*, *medium* and *
 - .medium-6 => will fill the screen 50%.
 - .large-4 => will fill the screen 33%.
 
+**Tip:** When defining the width of the parent container, use "max-width" instead of "width". This will create a more responsive experience.
 
 Installation
 ---

@@ -54,6 +54,8 @@ Installation
 
 Other functions
 ---
+**.push:** will "push" elements *(for the best understanding of this, check out the index.html file for a demo).*
+
 **.small-hide:** will hide the element when the screen is "small".
 
 **.medium-hide:** will hide the element when the screen is "medium".

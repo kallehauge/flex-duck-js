@@ -80,15 +80,15 @@ Browser support
 
 Tested devices
 ---
-*This is the devices I've personally been able to test in on myself but it should reflect the entire scale.*
+*This is the devices I've personally been able to test it on myself but it should reflect the entire scale.*
 
 **Tablets**
 
-- iPad 2: iOS7
+- iPad 2: *iOS7.*
 
 **Phones**
 
-- Android: Sony Xperia Mini Pro, Samsung Galaxy 3.
+- Android: *Sony Xperia Mini Pro, Samsung Galaxy 3.*
 
 License
 ---

@@ -7,6 +7,10 @@ The idea came when I discussed workflow with a friend and how easy it would be t
 
 *Disclaimer: if you and/or your team are using SASS or Less, then this plugin won't most likely be your best choice (but still a viable solution).*
 
+Demo
+---
+
+[Demo-page](http://kallehauge.github.io/flex-duck-js/)
 
 Semantics
 ---

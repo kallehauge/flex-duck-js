@@ -68,6 +68,28 @@ Other functions
 **.large-hide:** will hide the element when the screen is "large".
 
 
-License:
+Browser support
+---
+*This is the browsers I've personally tested it on. Feel free to push further supported browsers.*
+
+- IE 8+
+- Safari
+- Google Chrome
+- Mozilla Firefox
+- Opera
+
+Tested devices
+---
+*This is the devices I've personally been able to test in on myself but it should reflect the entire scale.*
+
+**Tablets**
+
+- iPad 2: iOS7
+
+**Phones**
+
+- Android: Sony Xperia Mini Pro, Samsung Galaxy 3.
+
+License
 ---
 MIT

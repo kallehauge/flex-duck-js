@@ -5,17 +5,15 @@
  *  This file contains general rules that will make the flex-duck-js script work.
  */
 
-/* Will make borders & padding go inside the elements instead of expanding */
-    *, *:before, *:after {
-        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-        box-sizing: border-box;         /* Opera/IE 8+ */
-    }
 
 /* Define behavior for rows  */
     .row {
         /* Set width to 100% of its parent */
         width: 100%;
+        /* Will make borders & padding go inside the elements instead of expanding */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        box-sizing: border-box;         /* Opera/IE 8+ */
     }
 
 /* Clear floats after each row */
@@ -24,11 +22,11 @@
         display: block;
         clear: both;
         height: 0;
-        visibility: none;
+        visibility: hidden;
     }
 
 /* Add general rules for all columns */
-    .row [class *= "small-"], .row [class *= "medium-"], .row [class *= "large-"] {
+    .row > [class *= "small-"], .row > [class *= "medium-"], .row > [class *= "large-"] {
         /* Make the columns collapse correctly */
         float: left;
         display: block;

@@ -13,14 +13,14 @@ var fdChangeQuery;
 // The core for this plugin to work.
 function initFlexDuck(columnsAmount, mediumScreen, largeScreen) {
 	// Main purpose: make sure the parameters are integers, so it will strip "px" and other characters.
-	columnsAmount = parseInt(columnsAmount);
-	mediumScreen  = parseInt(mediumScreen);
-	largeScreen   = parseInt(largeScreen);
+	columnsAmount = parseInt(columnsAmount, 10);
+	mediumScreen  = parseInt(mediumScreen, 10);
+	largeScreen   = parseInt(largeScreen, 10);
 
 	// Define class-names that will be used in the HTML (ex: small-12).
-	smallClass 	= "small";
+	smallClass  = "small";
 	mediumClass = "medium";
-	largeClass 	= "large";
+	largeClass	= "large";
 
 	// Width: calculate each column's percentage width.
 	function columnsPercentage(columns) {
@@ -47,7 +47,7 @@ function initFlexDuck(columnsAmount, mediumScreen, largeScreen) {
 		// Grid classes: set the width of all classes.
 		for (i = 1; i <= amount; i++) {
 			$("."+className+"-"+i).css("width", width[i]+"%");
-		};
+		}
 
 		// Show or hide files.
 		$("[class *= '-hide']").removeClass(function(i, string) {

@@ -1,7 +1,7 @@
 Introduction
 ===
 
-I started developing this small jQuery plugin (5kb) to have an easy to use set of semantics, without the need to set up SASS or Less. You're forced to define all breakpoin classes for the responsive markup (or set a hide-class). I chose to do it like this, so you're forced to think about your elements in all the breakpoints. - This decision is based on the founding idea of the plugin as a wireframe tool, but have since proven itself worthy for full projects too, after some efficiency changes were made.
+I started developing this small jQuery plugin (5kb) to have an easy to use set of semantics, without the need to set up SASS or Less. You're forced to define all breakpoint-classes for the responsive markup (or set a class-hide). I chose to do it like this, so you're forced to think about your elements in all the breakpoints. - This decision is based on the founding idea of the plugin as a wireframe tool, but have since proven itself worthy for full projects too, after some efficiency changes were made.
 
 The idea came when I discussed workflow with a friend and how easy it would be to share wireframes with other people or teams, since it would be a more flexible approach to ex: Bootstrap or Zurb Foundation's repsonsive design sematics.
 
@@ -73,10 +73,10 @@ Browser support
 *This is the browsers I've personally tested it on. Feel free to push further supported browsers.*
 
 - IE 8+
-- Safari
-- Google Chrome
-- Mozilla Firefox
-- Opera
+- Safari (tested in v. 6.0.5).
+- Google Chrome (tested in v. 30).
+- Mozilla Firefox (tested in v. 24).
+- Opera (tested in v. 17).
 
 Tested devices
 ---

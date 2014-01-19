@@ -92,4 +92,4 @@ Tested devices
 
 License
 ---
-MIT
+[MIT License](https://github.com/kallehauge/flex-duck-js/blob/master/LICENSE)
